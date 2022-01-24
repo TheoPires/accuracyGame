@@ -34,10 +34,10 @@ def refresh_screen():
 
 
 def print_score(score):
-    FONTSIZE = 25
-    font = pygame.font.SysFont('Arial', FONTSIZE)
-    score_display = font.render(str(score), 1, RED)
-    screen.blit(score_display, (1080 - FONTSIZE, 0))
+    fontsize = 25
+    font = pygame.font.SysFont('Arial', fontsize)
+    score_display = font.render(str(score), True, RED)
+    screen.blit(score_display, (1080 - fontsize, 0))
 
 
 def start_game():
@@ -67,8 +67,8 @@ def start_game():
 
 def menu():
     intro = True
-    FONTSIZE = 25
-    font = pygame.font.SysFont('Arial', FONTSIZE)
+    fontsize = 25
+    font = pygame.font.SysFont('Arial', fontsize)
     play_button = pygame.draw.rect(screen, BLUE, (200, 150, 100, 50))
     screen.blit(font.render('Start', True, (255, 0, 0)), (200, 150))
     quit_button = pygame.draw.rect(screen, BLUE, (400, 150, 100, 50))
